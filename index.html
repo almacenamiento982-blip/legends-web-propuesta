@@ -22,7 +22,7 @@
   --radio:14px;--ancho:1180px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--papel);color:var(--tinta);font:500 16px/1.6 Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
@@ -43,61 +43,81 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight
 .btn.navy-linea{border-color:var(--navy);color:var(--navy)}
 .btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2}
 
-/* Cabecera */
-.cab{position:sticky;top:0;z-index:20;background:rgba(0,24,72,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
-.cab .envoltura{display:flex;align-items:center;gap:18px;min-height:72px}
-.cab .logo{width:64px;height:auto}
-.menu{display:flex;gap:4px;margin-left:auto}
-.menu a{color:#dfe8f8;text-decoration:none;font-weight:700;font-size:14px;padding:8px 12px;border-radius:8px}
-.menu a:hover{color:#fff;background:rgba(255,255,255,.08)}
-.cab .btn{min-height:42px;padding:9px 18px;font-size:13px}
-.hamb{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.35);border-radius:10px;color:#fff;width:44px;height:44px;cursor:pointer}
+/* Cabecera: transparente sobre la portada, azul al bajar */
+.cab{position:fixed;top:0;left:0;right:0;z-index:20;background:transparent;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.cab.solida{background:rgba(0,24,72,.95);backdrop-filter:blur(10px);border-bottom-color:rgba(255,255,255,.08)}
+.cab .envoltura{display:flex;align-items:center;gap:18px;min-height:76px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.cab .logo{width:52px;height:auto}
+.marca b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:21px;line-height:1;letter-spacing:.02em;text-transform:uppercase}
+.marca b span{color:var(--celeste)}
+.marca small{display:block;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);margin-top:4px}
+.menu{display:flex;gap:2px;margin-left:auto}
+.menu a{color:#fff;text-decoration:none;font-weight:800;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;padding:8px 11px;border-radius:8px;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.menu a:hover{background:rgba(255,255,255,.1)}
+.cab .btn{min-height:44px;padding:10px 20px;font-size:13px}
+.hamb{display:none;margin-left:auto;background:rgba(0,24,72,.35);border:1px solid rgba(255,255,255,.4);border-radius:10px;color:#fff;width:44px;height:44px;cursor:pointer}
 .hamb svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
-@media (max-width:900px){
-  .menu{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--navy);padding:10px 20px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+@media (max-width:1060px){
+  .menu{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--navy);padding:10px 20px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
   .menu.abierto{display:flex}
-  .menu a{font-size:17px;padding:12px 8px}
+  .menu a{font-size:15px;padding:13px 8px}
   .hamb{display:inline-grid;place-items:center}
   .cab .btn{display:none}
 }
+@media (max-width:420px){.marca b{font-size:18px}.cab .logo{width:44px}}
 
-/* Hero */
-.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(900px 500px at 85% 30%,rgba(7,204,250,.18),transparent 60%),
-  radial-gradient(700px 500px at 10% 100%,rgba(255,185,1,.10),transparent 60%)}
-.franjas{position:absolute;width:340px;height:340px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--oro) 0 14px,transparent 14px 34px);opacity:.9}
-.franjas.ar{top:-230px;left:-230px}
-.franjas.ab{bottom:-200px;right:-160px}
-.hero .envoltura{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:56px 64px}
-.ceja{display:inline-flex;align-items:center;gap:10px;font-size:12px;color:var(--celeste);margin-bottom:18px}
+/* Hero (sistema Clash): texto a la izquierda sobre azul con LEGENDS gigante de fondo; a la derecha, 5 fotos de 2026
+   a toda la altura que se alternan con fundido y zoom lento */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;color:#fff;overflow:hidden;
+  background:radial-gradient(110% 90% at 15% 30%,#0b2c6e 0%,var(--navy) 55%,var(--noche) 100%)}
+.gigante{position:absolute;left:-2vw;bottom:-5vw;font-family:Anton,Impact,sans-serif;font-size:27vw;line-height:.8;color:transparent;
+  -webkit-text-stroke:2px rgba(7,204,250,.14);pointer-events:none;user-select:none;text-transform:uppercase;z-index:0}
+.hero .txt{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;
+  padding:120px 28px 64px max(20px,calc((100vw - var(--ancho))/2 + 20px))}
+.hero .logo-hero{width:clamp(84px,8vw,118px);height:auto;margin-bottom:18px}
+.ceja{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:12px;color:var(--celeste);margin-bottom:14px}
 .ceja b{display:inline-block;background:var(--oro);color:var(--navy);border-radius:4px;padding:3px 8px;font-family:Montserrat,sans-serif;font-weight:800;letter-spacing:.08em}
-.hero h1{font-size:clamp(52px,8.4vw,112px);text-wrap:balance}
-.hero h1 .c{color:var(--celeste)}.hero h1 .o{color:var(--oro)}
-.hero .bajada{font-size:18px;color:#cfdcf2;max-width:52ch;margin:18px 0 0}
-.fechas-hero{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:28px 0 0;max-width:560px}
-.fh{border:1.5px solid rgba(255,255,255,.18);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.04)}
+.hero h1{font-size:clamp(60px,7.6vw,118px);line-height:.92}
+.hero h1 span{display:block;color:var(--celeste);font-size:.6em;letter-spacing:.04em}
+.lema{font-size:clamp(17px,1.6vw,21px);font-weight:600;font-style:italic;color:#d8e3f6;margin:12px 0 0}
+.fechas-hero{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 0}
+.fh{border:1.5px solid rgba(255,255,255,.22);border-radius:12px;padding:12px 16px;background:rgba(255,255,255,.04);min-width:220px}
 .fh small{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--celeste)}
 .fh strong{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:28px;letter-spacing:.02em;line-height:1.1}
 .fh span{font-size:13px;color:#b9c8e3}
-.fh.vivo{border-color:var(--oro);background:rgba(255,185,1,.08)}
+.fh.vivo{border-color:var(--oro);background:rgba(255,185,1,.10)}
 .punto{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--oro);margin-right:6px;vertical-align:middle;animation:late 1.4s infinite}
 @keyframes late{50%{opacity:.25}}
-.acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.foto-hero{position:relative;justify-self:end;width:min(100%,470px)}
-.foto-hero picture,.foto-hero picture img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%;height:auto}
-.foto-hero::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--oro);border-radius:18px}
-.foto-hero picture{position:relative;display:block}
-.sello{position:absolute;left:-26px;bottom:34px;background:#fff;color:var(--navy);border-radius:14px;padding:12px 16px;box-shadow:0 14px 40px rgba(0,0,0,.35);display:flex;align-items:center;gap:12px}
-.sello img{width:52px;height:auto;border-radius:0;aspect-ratio:auto}
-.sello b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:22px;line-height:1}
-.sello span{font-size:12px;font-weight:700;color:var(--gris)}
+.acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.foto{position:relative;overflow:hidden}
+.fondos{position:absolute;inset:0}
+.fondos picture{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.fondos picture.on{opacity:1}
+.fondos img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;transform:scale(1.02)}
+.fondos picture.on img{animation:zoom 7.5s ease-out forwards}
+@keyframes zoom{from{transform:scale(1.02)}to{transform:scale(1.09)}}
+.foto::before{content:"";position:absolute;inset:0;z-index:1;background:
+  linear-gradient(90deg,var(--navy) 0%,rgba(0,24,72,0) 26%),
+  linear-gradient(180deg,rgba(0,16,47,.8) 0%,rgba(0,16,47,0) 18%),
+  linear-gradient(0deg,rgba(0,16,47,.7) 0%,rgba(0,16,47,0) 30%)}
+.franjas{position:absolute;width:340px;height:340px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--oro) 0 14px,transparent 14px 34px);opacity:.9}
+.foto .franjas{z-index:2;bottom:-200px;right:-180px}
+.puntos{position:absolute;z-index:3;right:28px;bottom:30px;display:flex;gap:8px}
+.puntos button{width:30px;height:5px;border-radius:4px;border:0;background:rgba(255,255,255,.4);cursor:pointer;padding:0}
+.puntos button[aria-current="true"]{background:var(--oro)}
 @media (max-width:900px){
-  .hero .envoltura{grid-template-columns:1fr;gap:36px;padding-block:36px 52px}
-  .foto-hero{justify-self:center;width:min(100%,420px)}
-  .sello{left:8px}
+  .hero{grid-template-columns:1fr;grid-template-rows:58vh auto;min-height:0}
+  .foto{order:1;min-height:340px}
+  .hero .txt{order:2;padding:10px 20px 52px}
+  .hero .logo-hero{display:none}
+  .foto::before{background:linear-gradient(180deg,rgba(0,16,47,.8) 0%,rgba(0,16,47,0) 24%,rgba(0,16,47,0) 66%,var(--navy) 100%)}
+  .gigante{font-size:44vw;bottom:-3vw}
+  .puntos{right:auto;left:20px;bottom:18px}
+  .foto .franjas{display:none}
 }
-@media (max-width:480px){.fechas-hero{grid-template-columns:1fr}.hero .bajada{font-size:16px}.acciones .btn{flex:1 1 100%}}
+@media (max-width:480px){.fh{min-width:0;flex:1 1 100%}.acciones .btn{flex:1 1 100%}}
+@media (prefers-reduced-motion:reduce){.fondos picture{transition:none}.fondos picture.on img{animation:none}}
 
 /* Franja de cifras */
 .cifras{background:var(--oro);color:var(--navy)}
@@ -183,7 +203,7 @@ section{padding-block:80px}
 .hotel .aviso svg{flex:none;width:20px;height:20px;stroke:var(--oro);fill:none;stroke-width:2.2;margin-top:2px}
 .hotel .botones{display:grid;gap:12px;position:relative}
 @media (max-width:900px){.hotel{grid-template-columns:1fr;padding:32px 22px}}
-@media (max-width:640px){.franjas{width:190px;height:190px}.franjas.ar{top:-150px;left:-150px}.franjas.ab{bottom:-130px;right:-110px}.hotel .franjas{display:none}}
+@media (max-width:640px){.hotel .franjas{display:none}}
 
 /* Reglas */
 .reglas{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
@@ -241,9 +261,9 @@ footer a{color:#dfe8f8}
 </head>
 <body>
 
-<header class="cab">
+<header class="cab" id="cab">
   <div class="envoltura">
-    <a href="#inicio" aria-label="Legends Cup Miami, home"><img class="logo" src="assets/logo_legends_180.png" alt="Legends Cup Miami" width="64" height="66"></a>
+    <a class="marca" href="#inicio" aria-label="Legends Cup Miami, home"><img class="logo" src="assets/logo_legends_180.png" alt="" width="52" height="54"><span><b>Legends <span>Cup Miami</span></b><small>4th edition · 2026</small></span></a>
     <button class="hamb" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <nav class="menu" id="menu" aria-label="Main">
       <a href="#weekends">Weekends</a><a href="#clubs">Clubs</a><a href="#parks">Parks</a><a href="#hotels">Hotels</a><a href="#rules">Rules</a><a href="#contact">Contact</a>
@@ -253,28 +273,33 @@ footer a{color:#dfe8f8}
 </header>
 
 <main id="inicio">
-<!-- HERO -->
+<!-- HERO (sistema Clash): texto a la izquierda, fotos de 2026 que se alternan a la derecha -->
 <section class="hero" style="padding-block:0" aria-labelledby="h-hero">
-  <span class="franjas ar" aria-hidden="true"></span><span class="franjas ab" aria-hidden="true"></span>
-  <div class="envoltura">
-    <div>
-      <p class="ceja ext"><b>4th edition</b> Miami, Florida · 2026</p>
-      <h1 id="h-hero">Where <span class="c">legends</span> are <span class="o">made</span></h1>
-      <p class="bajada">Youth soccer tournament for boys and girls teams, from U9 Future Stars to U19. Two weekends in Miami, a minimum of 3 games for every team and trophies for champions and finalists.</p>
-      <div class="fechas-hero">
-        <div class="fh"><small>Weekend 1 · 11v11</small><strong>Oct 23–25, 2026</strong><span>U13–U19 · Completed</span></div>
-        <div class="fh vivo"><small><span class="punto" aria-hidden="true"></span>Weekend 2 · 7v7 &amp; 9v9</small><strong>Nov 6–8, 2026</strong><span>U9 FS–U12 · Live now</span></div>
-      </div>
-      <div class="acciones">
-        <a class="btn oro" href="https://system.gotsport.com/org_event/events/54323" target="_blank" rel="noopener">7v7 &amp; 9v9 schedules &amp; results <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn linea" href="https://www.legendsmiamicup.com/_files/ugd/cfcd23_c2998aae967b45fa8d22caddc3df68d9.pdf" target="_blank" rel="noopener">Field maps</a>
-      </div>
+  <span class="gigante" aria-hidden="true">Legends</span>
+  <div class="txt">
+    <img class="logo-hero" src="assets/logo_legends_360.webp" alt="" width="118" height="122">
+    <p class="ceja ext"><b>4th edition</b> Miami, Florida · Boys &amp; girls U9–U19</p>
+    <h1 id="h-hero">Legends <span>Cup Miami</span></h1>
+    <p class="lema">Where legends are made.</p>
+    <div class="fechas-hero">
+      <div class="fh"><small>Weekend 1 · 11v11</small><strong>Oct 23–25, 2026</strong><span>U13–U19 · Completed</span></div>
+      <div class="fh vivo"><small><span class="punto" aria-hidden="true"></span>Weekend 2 · 7v7 &amp; 9v9</small><strong>Nov 6–8, 2026</strong><span>U9 FS–U12 · Live now</span></div>
     </div>
-    <div class="foto-hero">
-      <picture><source srcset="assets/hero_640.webp 640w, assets/hero_1100.webp 1100w" sizes="(max-width:900px) 90vw, 470px" type="image/webp">
-        <img src="assets/hero_1100.webp" alt="A team lifts the Legends Cup trophy in front of the tournament flags, 2026" width="1100" height="1375" fetchpriority="high"></picture>
-      <div class="sello"><img src="assets/logo_legends_180.png" alt="" width="52" height="54"><div><b>Champions 2026</b><span>11v11 weekend</span></div></div>
+    <div class="acciones">
+      <a class="btn oro" href="https://system.gotsport.com/org_event/events/54323" target="_blank" rel="noopener">7v7 &amp; 9v9 schedules &amp; results <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn linea" href="https://www.legendsmiamicup.com/_files/ugd/cfcd23_c2998aae967b45fa8d22caddc3df68d9.pdf" target="_blank" rel="noopener">Field maps</a>
     </div>
+  </div>
+  <div class="foto">
+    <div class="fondos" aria-hidden="true">
+      <picture class="on"><source srcset="assets/s1m_700.webp 700w, assets/s1m_1100.webp 1100w" sizes="(max-width:900px) 100vw, 48vw" type="image/webp"><img src="assets/s1m_1100.webp" alt="A team lifts the Legends Cup trophy, 2026" fetchpriority="high"></picture>
+      <picture><source data-srcset="assets/s2m_700.webp 700w, assets/s2m_1100.webp 1100w" sizes="(max-width:900px) 100vw, 48vw" type="image/webp"><img data-src="assets/s2m_1100.webp" alt="Two players fight for the ball in an 11v11 match"></picture>
+      <picture><source data-srcset="assets/s3m_700.webp 700w, assets/s3m_1100.webp 1100w" sizes="(max-width:900px) 100vw, 48vw" type="image/webp"><img data-src="assets/s3m_1100.webp" alt="A player shoots past a sliding defender, with palm trees behind"></picture>
+      <picture><source data-srcset="assets/s4m_700.webp 700w, assets/s4m_1100.webp 1100w" sizes="(max-width:900px) 100vw, 48vw" type="image/webp"><img data-src="assets/s4m_1100.webp" alt="A player juggles the ball under a blue sky"></picture>
+      <picture><source data-srcset="assets/s5m_700.webp 700w, assets/s5m_1100.webp 1100w" sizes="(max-width:900px) 100vw, 48vw" type="image/webp"><img data-src="assets/s5m_1100.webp" alt="A goalkeeper seen through the net"></picture>
+    </div>
+    <span class="franjas" aria-hidden="true"></span>
+    <div class="puntos" role="group" aria-label="Background photos"><button type="button" aria-label="Photo 1" aria-current="true"></button><button type="button" aria-label="Photo 2"></button><button type="button" aria-label="Photo 3"></button><button type="button" aria-label="Photo 4"></button><button type="button" aria-label="Photo 5"></button></div>
   </div>
 </section>
 
@@ -578,8 +603,19 @@ footer a{color:#dfe8f8}
 
 <script>
 (function(){
+  var cab=document.getElementById('cab');
+  function sc(){cab.classList.toggle('solida',scrollY>40||document.getElementById('menu').classList.contains('abierto'));}
+  addEventListener('scroll',sc,{passive:true});sc();
+  // Fotos de fondo del hero: cambian cada 6 s con fundido; cada foto se carga justo antes de mostrarse
+  var ps=[].slice.call(document.querySelectorAll('.fondos picture')),bs=[].slice.call(document.querySelectorAll('.puntos button')),k=0,t=null;
+  function cargar(pic){[].slice.call(pic.querySelectorAll('[data-srcset],[data-src]')).forEach(function(e){if(e.dataset.srcset){e.srcset=e.dataset.srcset;e.removeAttribute('data-srcset')}if(e.dataset.src){e.src=e.dataset.src;e.removeAttribute('data-src')}});}
+  function ir(n){ps[k].classList.remove('on');bs[k].removeAttribute('aria-current');k=(n+ps.length)%ps.length;cargar(ps[k]);void ps[k].offsetWidth;ps[k].classList.add('on');bs[k].setAttribute('aria-current','true');cargar(ps[(k+1)%ps.length]);}
+  var quieto=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function arrancar(){clearInterval(t);if(!quieto)t=setInterval(function(){if(!document.hidden)ir(k+1)},6000);}
+  if(document.readyState==='complete'){cargar(ps[1]);arrancar();}else addEventListener('load',function(){cargar(ps[1]);arrancar();});
+  bs.forEach(function(x,i){x.addEventListener('click',function(){ir(i);arrancar();});});
   var b=document.querySelector('.hamb'),m=document.getElementById('menu');
-  b.addEventListener('click',function(){var a=m.classList.toggle('abierto');b.setAttribute('aria-expanded',String(a));});
+  b.addEventListener('click',function(){var a=m.classList.toggle('abierto');b.setAttribute('aria-expanded',String(a));sc();});
   m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('abierto');b.setAttribute('aria-expanded','false');}});
   // Acordeón: un tema abierto a la vez
   var ds=document.querySelectorAll('.acordeon details');
