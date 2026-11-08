@@ -171,11 +171,30 @@ section{padding-block:80px}
 @media (max-width:900px){.sobre{grid-template-columns:1fr;gap:32px}.sobre .ft{max-width:420px}}
 @media (max-width:560px){.lista-ok{grid-template-columns:1fr}}
 
-/* Clubes */
-.clubes{display:flex;flex-wrap:wrap;gap:10px}
-.club{border:1.5px solid rgba(255,255,255,.22);border-radius:999px;padding:10px 18px;font-weight:700;font-size:15px;color:#fff;background:rgba(255,255,255,.04)}
-.club.mas{border-color:var(--oro);color:var(--oro);text-decoration:none}
-.club.mas:hover{background:rgba(255,185,1,.1)}
+
+/* Clubes 2026: póster "Confirmed Clubs" + carrusel de las piezas "Confirmed" de Instagram */
+.clubes-g{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:40px;align-items:start}
+.poster{display:block;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4);position:relative}
+.poster img{width:100%}
+.poster span{display:block;text-align:center;background:var(--navy3);color:#fff;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:12px}
+.poster:hover span{background:var(--oro);color:var(--navy)}
+.cifra-clubes{display:flex;align-items:baseline;gap:14px;margin:0 0 6px}
+.cifra-clubes b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(64px,8vw,104px);line-height:.9;color:var(--oro)}
+.cifra-clubes span{font-family:"Krona One",sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#cfdcf2;max-width:16ch}
+.carril-cab{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:26px 0 12px}
+.carril-cab h3{font-size:26px;color:#fff}
+.flechas{display:flex;gap:8px}
+.flechas button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:transparent;color:#fff;cursor:pointer;font-size:20px;line-height:1}
+.flechas button:hover{border-color:var(--oro);color:var(--oro)}
+.carril{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(190px,32%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--oro) transparent}
+.carril a{scroll-snap-align:start;text-decoration:none;color:#fff;display:grid;gap:8px}
+.carril img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;transition:transform .2s}
+.carril a:hover img{transform:translateY(-3px)}
+.carril b{font-size:14px;font-weight:700}
+.carril small{display:block;font-size:12px;color:var(--celeste);font-weight:700}
+.clubes-g>*{min-width:0}
+.clubes-g .acciones{margin-top:18px}
+@media (max-width:900px){.clubes-g{grid-template-columns:minmax(0,1fr);gap:28px}.poster{max-width:460px}.carril{grid-auto-columns:62%}}
 
 /* Galería */
 .galeria{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
@@ -364,15 +383,34 @@ footer a{color:#dfe8f8}
 <!-- CLUBES -->
 <section class="oscura" id="clubs" aria-labelledby="h-clubes">
   <div class="envoltura">
-    <div class="titulo"><span class="ext">Legends Cup Miami 2026</span><h2 id="h-clubes">Clubs that joined this year</h2>
-      <p>Some of the clubs confirmed for the 4th edition. The complete list of teams for each weekend is on GotSport.</p></div>
-    <div class="clubes">
-      <span class="club">Inter Miami CF Academy</span><span class="club">PSG Academy Miami</span><span class="club">Weston FC</span><span class="club">One FC Miami</span>
-      <span class="club">Pinecrest Premier SC</span><span class="club">Miami Breakers FC</span><span class="club">Key Biscayne SC</span><span class="club">Miami Futbol Academy Rush</span>
-      <span class="club">Athletum FC</span><span class="club">Weston Select SC</span><span class="club">Strikers Miami FC</span><span class="club">Miami United Academy DP</span>
-      <span class="club">Coral Estate SC</span><span class="club">Atlético Fortaleza USA</span><span class="club">Fort Lauderdale United FC</span><span class="club">Albion SC Miami</span>
-      <a class="club mas" href="https://system.gotsport.com/org_event/events/54323/clubs" target="_blank" rel="noopener">7v7 &amp; 9v9 clubs →</a>
-      <a class="club mas" href="https://system.gotsport.com/org_event/events/54324/clubs" target="_blank" rel="noopener">11v11 clubs →</a>
+    <div class="titulo"><span class="ext">Legends Cup Miami 2026</span><h2 id="h-clubes">The clubs of the 4th edition</h2>
+      <p>Academies and clubs from all over South Florida, and beyond, confirmed for this year's Legends Cup.</p></div>
+    <div class="clubes-g">
+      <a class="poster" href="https://www.instagram.com/p/De2fG53I5Y3/" target="_blank" rel="noopener"><img src="assets/club_poster_640.webp" srcset="assets/club_poster_640.webp 640w, assets/club_poster_1000.webp 1000w" sizes="(max-width:900px) 90vw, 460px" alt="Legends Cup Miami 2026 confirmed clubs: the crests of the 38 participating clubs" width="1000" height="1250" loading="lazy"><span>View the post on Instagram →</span></a>
+      <div>
+        <p class="cifra-clubes"><b>38</b><span>clubs confirmed for 2026</span></p>
+        <div class="carril-cab"><h3>Club spotlights</h3><div class="flechas"><button type="button" data-carril="-1" aria-label="Previous clubs">‹</button><button type="button" data-carril="1" aria-label="Next clubs">›</button></div></div>
+        <div class="carril" id="carril" tabindex="0" aria-label="Clubs confirmed on Instagram">
+        <a href="https://www.instagram.com/p/DdCkQ6Bu3tb/" target="_blank" rel="noopener"><img src="assets/club_DdCkQ6Bu3tb.webp" alt="Pinecrest Premier SC confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>Pinecrest Premier SC</b><small>Confirmed · Sep 8</small></span></a>
+        <a href="https://www.instagram.com/p/DdEoR9DOVpD/" target="_blank" rel="noopener"><img src="assets/club_DdEoR9DOVpD.webp" alt="One FC Miami confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>One FC Miami</b><small>Confirmed · Sep 9</small></span></a>
+        <a href="https://www.instagram.com/p/DdHIQddIDTm/" target="_blank" rel="noopener"><img src="assets/club_DdHIQddIDTm.webp" alt="Weston FC confirmed for Legends Cup Miami 2026" width="480" height="613" loading="lazy"><span><b>Weston FC</b><small>Confirmed · Sep 10</small></span></a>
+        <a href="https://www.instagram.com/p/DdKMoGcIR7l/" target="_blank" rel="noopener"><img src="assets/club_DdKMoGcIR7l.webp" alt="Miami Breakers FC confirmed for Legends Cup Miami 2026" width="480" height="613" loading="lazy"><span><b>Miami Breakers FC</b><small>Confirmed · Sep 11</small></span></a>
+        <a href="https://www.instagram.com/p/DdO-OQjodko/" target="_blank" rel="noopener"><img src="assets/club_DdO-OQjodko.webp" alt="Inter Miami CF Academy confirmed for Legends Cup Miami 2026" width="480" height="613" loading="lazy"><span><b>Inter Miami CF Academy</b><small>Confirmed · Sep 14</small></span></a>
+        <a href="https://www.instagram.com/p/DdTQv9Zonrs/" target="_blank" rel="noopener"><img src="assets/club_DdTQv9Zonrs.webp" alt="Key Biscayne SC confirmed for Legends Cup Miami 2026" width="480" height="613" loading="lazy"><span><b>Key Biscayne SC</b><small>Confirmed · Sep 16</small></span></a>
+        <a href="https://www.instagram.com/p/Ddb6LeDoSr6/" target="_blank" rel="noopener"><img src="assets/club_Ddb6LeDoSr6.webp" alt="Athletum FC confirmed for Legends Cup Miami 2026" width="480" height="613" loading="lazy"><span><b>Athletum FC</b><small>Confirmed · Sep 18</small></span></a>
+        <a href="https://www.instagram.com/p/DdcM8rdIIia/" target="_blank" rel="noopener"><img src="assets/club_DdcM8rdIIia.webp" alt="Miami Futbol Academy Rush confirmed for Legends Cup Miami 2026" width="480" height="613" loading="lazy"><span><b>Miami Futbol Academy Rush</b><small>Confirmed · Sep 21</small></span></a>
+        <a href="https://www.instagram.com/p/Dd2InM4I8wu/" target="_blank" rel="noopener"><img src="assets/club_Dd2InM4I8wu.webp" alt="Weston Select SC confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>Weston Select SC</b><small>Confirmed · Sep 28</small></span></a>
+        <a href="https://www.instagram.com/p/Dd6VlKGI9qz/" target="_blank" rel="noopener"><img src="assets/club_Dd6VlKGI9qz.webp" alt="Strikers Miami FC confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>Strikers Miami FC</b><small>Confirmed · Oct 1</small></span></a>
+        <a href="https://www.instagram.com/p/DeDCjXmIN6h/" target="_blank" rel="noopener"><img src="assets/club_DeDCjXmIN6h.webp" alt="Miami United Academy DP confirmed for Legends Cup Miami 2026" width="480" height="602" loading="lazy"><span><b>Miami United Academy DP</b><small>Confirmed · Oct 3</small></span></a>
+        <a href="https://www.instagram.com/p/DeK4XiMIqAA/" target="_blank" rel="noopener"><img src="assets/club_DeK4XiMIqAA.webp" alt="Coral Estates SC confirmed for Legends Cup Miami 2026" width="480" height="615" loading="lazy"><span><b>Coral Estates SC</b><small>Confirmed · Oct 6</small></span></a>
+        <a href="https://www.instagram.com/p/DeUcbwAItZC/" target="_blank" rel="noopener"><img src="assets/club_DeUcbwAItZC.webp" alt="Atlético Fortaleza USA confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>Atlético Fortaleza USA</b><small>Confirmed · Oct 10</small></span></a>
+        <a href="https://www.instagram.com/p/Dee_gi8ITxc/" target="_blank" rel="noopener"><img src="assets/club_Dee_gi8ITxc.webp" alt="PSG Academy Miami confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>PSG Academy Miami</b><small>Confirmed · Oct 14</small></span></a>
+        <a href="https://www.instagram.com/p/DehGIcoINKD/" target="_blank" rel="noopener"><img src="assets/club_DehGIcoINKD.webp" alt="Fort Lauderdale United FC confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>Fort Lauderdale United FC</b><small>Confirmed · Oct 15</small></span></a>
+        <a href="https://www.instagram.com/p/DembbcnIq9y/" target="_blank" rel="noopener"><img src="assets/club_DembbcnIq9y.webp" alt="Albion SC Miami confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>Albion SC Miami</b><small>Confirmed · Oct 17</small></span></a>
+        <a href="https://www.instagram.com/p/DesVHTIoIFJ/" target="_blank" rel="noopener"><img src="assets/club_DesVHTIoIFJ.webp" alt="345 FC Cayman Islands confirmed for Legends Cup Miami 2026" width="480" height="607" loading="lazy"><span><b>345 FC Cayman Islands</b><small>Confirmed · Oct 19</small></span></a>
+        </div>
+        <div class="acciones"><a class="btn oro" href="https://system.gotsport.com/org_event/events/54323/clubs" target="_blank" rel="noopener">7v7 &amp; 9v9 teams</a><a class="btn linea" href="https://system.gotsport.com/org_event/events/54324/clubs" target="_blank" rel="noopener">11v11 teams</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -549,7 +587,7 @@ footer a{color:#dfe8f8}
   <span class="etiqueta">Solo para la revisión · no forma parte de la web</span>
   <h2>Para Alessandro · preguntas pendientes</h2>
   <p class="intro">Antes de publicar la web de Legends Cup Miami faltan estos datos. Elige una opción, agrega un comentario si hace falta y pulsa <b>Enviar respuestas</b>. Las respuestas quedan guardadas.</p>
-  <div class="preg" data-p="P1"><h3><b>P1</b>Teléfono de contacto</h3><p>La propuesta usa el (305) 335-9635, que está en la web actual y en las piezas de 2024-25. ¿Sigue vigente?</p><label class="op"><input type="radio" name="P1" value="Sí, sigue vigente"><span>Sí, sigue vigente</span></label><label class="op"><input type="radio" name="P1" value="Es otro número (escríbelo abajo)"><span>Es otro número (escríbelo abajo)</span></label><label class="op"><input type="radio" name="P1" value="Mejor no poner teléfono"><span>Mejor no poner teléfono</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P2"><h3><b>P2</b>Clubes 2026</h3><p>La sección "Clubs that joined this year" nombra 16 clubes anunciados como confirmados en Instagram (Inter Miami, PSG Academy, Weston FC, Athletum FC…).</p><label class="op"><input type="radio" name="P2" value="Se pueden mostrar así"><span>Se pueden mostrar así</span></label><label class="op"><input type="radio" name="P2" value="Mejor sin nombres (solo el enlace a GotSport)"><span>Mejor sin nombres (solo el enlace a GotSport)</span></label><label class="op"><input type="radio" name="P2" value="Quitar o agregar clubes (escribe abajo)"><span>Quitar o agregar clubes (escribe abajo)</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P3"><h3><b>P3</b>Después del torneo</h3><p>Desde el 9 de noviembre la portada pasaría a "Thank you / See you in 2027" y dejaría de decir "Live now". ¿Hay fechas de 2027 para anunciar?</p><label class="op"><input type="radio" name="P3" value="Sí, hay fechas (escríbelas abajo)"><span>Sí, hay fechas (escríbelas abajo)</span></label><label class="op"><input type="radio" name="P3" value="Todavía no: poner "2027 dates coming soon""><span>Todavía no: poner "2027 dates coming soon"</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P4"><h3><b>P4</b>Patrocinadores</h3><p>En 2025 aparecieron Nature Valley, Spinex Centers y Pummarola Pizzeria. ¿Se agrega una sección de patrocinadores?</p><label class="op"><input type="radio" name="P4" value="Sí, con esos"><span>Sí, con esos</span></label><label class="op"><input type="radio" name="P4" value="Sí, con otros (escribe cuáles)"><span>Sí, con otros (escribe cuáles)</span></label><label class="op"><input type="radio" name="P4" value="No por ahora"><span>No por ahora</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div>
+  <div class="preg" data-p="P1"><h3><b>P1</b>Teléfono de contacto</h3><p>La propuesta usa el (305) 335-9635, que está en la web actual y en las piezas de 2024-25. ¿Sigue vigente?</p><label class="op"><input type="radio" name="P1" value="Sí, sigue vigente"><span>Sí, sigue vigente</span></label><label class="op"><input type="radio" name="P1" value="Es otro número (escríbelo abajo)"><span>Es otro número (escríbelo abajo)</span></label><label class="op"><input type="radio" name="P1" value="Mejor no poner teléfono"><span>Mejor no poner teléfono</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P2"><h3><b>P2</b>Clubes 2026</h3><p>La sección de clubes muestra el póster "Confirmed Clubs" (38 clubes) y un carrusel con las 17 piezas "Confirmed" de Instagram, cada una enlazada a su publicación.</p><label class="op"><input type="radio" name="P2" value="Está bien así"><span>Está bien así</span></label><label class="op"><input type="radio" name="P2" value="Cambiar algo (escribe abajo)"><span>Cambiar algo (escribe abajo)</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P3"><h3><b>P3</b>Después del torneo</h3><p>Desde el 9 de noviembre la portada pasaría a "Thank you / See you in 2027" y dejaría de decir "Live now". ¿Hay fechas de 2027 para anunciar?</p><label class="op"><input type="radio" name="P3" value="Sí, hay fechas (escríbelas abajo)"><span>Sí, hay fechas (escríbelas abajo)</span></label><label class="op"><input type="radio" name="P3" value="Todavía no: poner "2027 dates coming soon""><span>Todavía no: poner "2027 dates coming soon"</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P4"><h3><b>P4</b>Patrocinadores</h3><p>En 2025 aparecieron Nature Valley, Spinex Centers y Pummarola Pizzeria. ¿Se agrega una sección de patrocinadores?</p><label class="op"><input type="radio" name="P4" value="Sí, con esos"><span>Sí, con esos</span></label><label class="op"><input type="radio" name="P4" value="Sí, con otros (escribe cuáles)"><span>Sí, con otros (escribe cuáles)</span></label><label class="op"><input type="radio" name="P4" value="No por ahora"><span>No por ahora</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div>
   <div class="acciones-ra"><button class="b-env" type="button" data-ra="enviar">Enviar respuestas</button><span class="estado" data-ra="estado"></span></div>
   <div class="general">
    <h3>¿Apruebas la web?</h3>
@@ -614,6 +652,8 @@ footer a{color:#dfe8f8}
   function arrancar(){clearInterval(t);if(!quieto)t=setInterval(function(){if(!document.hidden)ir(k+1)},6000);}
   if(document.readyState==='complete'){cargar(ps[1]);arrancar();}else addEventListener('load',function(){cargar(ps[1]);arrancar();});
   bs.forEach(function(x,i){x.addEventListener('click',function(){ir(i);arrancar();});});
+  // Carrusel de clubes: flechas
+  document.querySelectorAll('[data-carril]').forEach(function(x){x.addEventListener('click',function(){var c=document.getElementById('carril');c.scrollBy({left:(+x.dataset.carril)*c.clientWidth*.9,behavior:'smooth'});});});
   var b=document.querySelector('.hamb'),m=document.getElementById('menu');
   b.addEventListener('click',function(){var a=m.classList.toggle('abierto');b.setAttribute('aria-expanded',String(a));sc();});
   m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('abierto');b.setAttribute('aria-expanded','false');}});
