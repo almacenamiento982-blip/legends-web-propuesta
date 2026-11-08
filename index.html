@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Legends Cup Miami 2026 | Youth Soccer Tournament | U9–U19</title>
+<meta name="description" content="Legends Cup Miami, 4th edition. Youth soccer tournament for boys and girls teams, U9 Future Stars to U19. 11v11: Oct 23–25, 2026 · 7v7 & 9v9: Nov 6–8, 2026. Minimum 3 games guaranteed.">
+<meta property="og:title" content="Legends Cup Miami 2026 · Youth Soccer Tournament">
+<meta property="og:description" content="4th edition · U9 Future Stars to U19 · Two weekends in Miami · Minimum 3 games guaranteed.">
+<meta property="og:image" content="https://almacenamiento982-blip.github.io/legends-web-propuesta/assets/og_legends_1200x630.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo_legends_180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Krona+One&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* 07-11-2026 · Propuesta de rediseño de legendsmiamicup.com (maqueta local). Línea gráfica: LINEA_GRAFICA_LEGENDS_CUP.md
+   Azul marino #001848 · celeste #07CCFA · dorado #FFB901 · plata #939393 · Anton (titulares) · Krona One (extendida) · Montserrat */
+:root{
+  --navy:#001848;--navy2:#0a2560;--navy3:#002a6e;--noche:#00102f;--celeste:#07CCFA;--oro:#FFB901;--oro2:#F9B806;--plata:#939393;
+  --blanco:#fff;--papel:#f3f6fb;--tinta:#0b1630;--gris:#5a6680;--linea:#d9e1ee;
+  --radio:14px;--ancho:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:500 16px/1.6 Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.01em;line-height:1.02;text-transform:uppercase}
+.ext{font-family:"Krona One",Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+.envoltura{max-width:var(--ancho);margin:0 auto;padding-inline:20px}
+:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:13px 24px;border-radius:999px;font-weight:800;font-size:15px;letter-spacing:.03em;text-decoration:none;text-transform:uppercase;border:2px solid transparent;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.oro{background:var(--oro);color:var(--navy)}
+.btn.oro:hover{background:#ffc93a}
+.btn.linea{border-color:rgba(255,255,255,.55);color:#fff}
+.btn.linea:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.navy-linea{border-color:var(--navy);color:var(--navy)}
+.btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2}
+
+/* Cabecera */
+.cab{position:sticky;top:0;z-index:20;background:rgba(0,24,72,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.cab .envoltura{display:flex;align-items:center;gap:18px;min-height:72px}
+.cab .logo{width:64px;height:auto}
+.menu{display:flex;gap:4px;margin-left:auto}
+.menu a{color:#dfe8f8;text-decoration:none;font-weight:700;font-size:14px;padding:8px 12px;border-radius:8px}
+.menu a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.cab .btn{min-height:42px;padding:9px 18px;font-size:13px}
+.hamb{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.35);border-radius:10px;color:#fff;width:44px;height:44px;cursor:pointer}
+.hamb svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
+@media (max-width:900px){
+  .menu{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--navy);padding:10px 20px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .menu.abierto{display:flex}
+  .menu a{font-size:17px;padding:12px 8px}
+  .hamb{display:inline-grid;place-items:center}
+  .cab .btn{display:none}
+}
+
+/* Hero */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 500px at 85% 30%,rgba(7,204,250,.18),transparent 60%),
+  radial-gradient(700px 500px at 10% 100%,rgba(255,185,1,.10),transparent 60%)}
+.franjas{position:absolute;width:340px;height:340px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--oro) 0 14px,transparent 14px 34px);opacity:.9}
+.franjas.ar{top:-230px;left:-230px}
+.franjas.ab{bottom:-200px;right:-160px}
+.hero .envoltura{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:56px 64px}
+.ceja{display:inline-flex;align-items:center;gap:10px;font-size:12px;color:var(--celeste);margin-bottom:18px}
+.ceja b{display:inline-block;background:var(--oro);color:var(--navy);border-radius:4px;padding:3px 8px;font-family:Montserrat,sans-serif;font-weight:800;letter-spacing:.08em}
+.hero h1{font-size:clamp(52px,8.4vw,112px);text-wrap:balance}
+.hero h1 .c{color:var(--celeste)}.hero h1 .o{color:var(--oro)}
+.hero .bajada{font-size:18px;color:#cfdcf2;max-width:52ch;margin:18px 0 0}
+.fechas-hero{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:28px 0 0;max-width:560px}
+.fh{border:1.5px solid rgba(255,255,255,.18);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.04)}
+.fh small{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--celeste)}
+.fh strong{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:28px;letter-spacing:.02em;line-height:1.1}
+.fh span{font-size:13px;color:#b9c8e3}
+.fh.vivo{border-color:var(--oro);background:rgba(255,185,1,.08)}
+.punto{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--oro);margin-right:6px;vertical-align:middle;animation:late 1.4s infinite}
+@keyframes late{50%{opacity:.25}}
+.acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.foto-hero{position:relative;justify-self:end;width:min(100%,470px)}
+.foto-hero picture,.foto-hero picture img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%;height:auto}
+.foto-hero::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--oro);border-radius:18px}
+.foto-hero picture{position:relative;display:block}
+.sello{position:absolute;left:-26px;bottom:34px;background:#fff;color:var(--navy);border-radius:14px;padding:12px 16px;box-shadow:0 14px 40px rgba(0,0,0,.35);display:flex;align-items:center;gap:12px}
+.sello img{width:52px;height:auto;border-radius:0;aspect-ratio:auto}
+.sello b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:22px;line-height:1}
+.sello span{font-size:12px;font-weight:700;color:var(--gris)}
+@media (max-width:900px){
+  .hero .envoltura{grid-template-columns:1fr;gap:36px;padding-block:36px 52px}
+  .foto-hero{justify-self:center;width:min(100%,420px)}
+  .sello{left:8px}
+}
+@media (max-width:480px){.fechas-hero{grid-template-columns:1fr}.hero .bajada{font-size:16px}.acciones .btn{flex:1 1 100%}}
+
+/* Franja de cifras */
+.cifras{background:var(--oro);color:var(--navy)}
+.cifras ul{list-style:none;margin:0 auto;padding:18px 20px;max-width:var(--ancho);display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.cifras li{display:flex;flex-direction:column;align-items:center;text-align:center}
+.cifras b{font-family:Anton,sans-serif;font-weight:400;font-size:34px;line-height:1}
+.cifras span{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+@media (max-width:760px){.cifras ul{grid-template-columns:repeat(2,1fr)}.cifras li:last-child{grid-column:1/-1}}
+
+/* Secciones */
+section{padding-block:80px}
+.titulo{display:grid;gap:10px;margin-bottom:36px;max-width:760px}
+.titulo .ext{font-size:12px;color:var(--navy3)}
+.titulo h2{font-size:clamp(40px,5.6vw,68px);color:var(--navy)}
+.titulo p{margin:0;color:var(--gris);font-size:17px}
+.oscura{background:var(--navy);color:#fff}
+.oscura .titulo h2{color:#fff}.oscura .titulo .ext{color:var(--celeste)}.oscura .titulo p{color:#c3d1ea}
+@media (max-width:640px){section{padding-block:56px}}
+
+/* Fines de semana */
+.findes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.finde{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--linea);display:flex;flex-direction:column}
+.finde .ft{position:relative}
+.finde .ft img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.etq{position:absolute;top:14px;left:14px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 12px}
+.etq.vivo{background:var(--oro);color:var(--navy)}
+.etq.hecho{background:rgba(0,16,47,.82);color:#fff}
+.finde .cuerpo{padding:24px;display:grid;gap:16px;flex:1}
+.finde h3{font-size:40px;color:var(--navy)}
+.finde .cuando{font-family:"Krona One",sans-serif;font-size:13px;color:var(--navy3);letter-spacing:.04em}
+.datos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0}
+.datos div{background:var(--papel);border-radius:10px;padding:10px 12px}
+.datos dt{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
+.datos dd{margin:2px 0 0;font-weight:800;color:var(--navy);font-size:17px;font-variant-numeric:tabular-nums}
+.parques-mini{font-size:14px;color:var(--gris);margin:0}
+.parques-mini b{color:var(--tinta)}
+.finde .acciones{margin-top:auto;gap:10px}
+.finde .btn{min-height:46px;padding:11px 18px;font-size:13px}
+@media (max-width:900px){.findes{grid-template-columns:1fr}}
+@media (max-width:420px){.datos{grid-template-columns:1fr 1fr}.datos div:last-child{grid-column:1/-1}}
+
+/* Sobre el torneo */
+.sobre{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.sobre .ft img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%;height:auto}
+.sobre .ft{align-self:center}
+.lista-ok{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.lista-ok li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--linea);border-radius:12px;padding:14px;font-weight:600}
+.lista-ok svg{flex:none;width:22px;height:22px;stroke:var(--navy);fill:none;stroke-width:2.4;background:var(--oro);border-radius:50%;padding:3px}
+.cita{margin:28px 0 0;padding:18px 22px;border-left:4px solid var(--celeste);background:#fff;border-radius:0 12px 12px 0;font-size:15px;color:var(--gris)}
+.cita b{color:var(--tinta)}
+@media (max-width:900px){.sobre{grid-template-columns:1fr;gap:32px}.sobre .ft{max-width:420px}}
+@media (max-width:560px){.lista-ok{grid-template-columns:1fr}}
+
+/* Clubes */
+.clubes{display:flex;flex-wrap:wrap;gap:10px}
+.club{border:1.5px solid rgba(255,255,255,.22);border-radius:999px;padding:10px 18px;font-weight:700;font-size:15px;color:#fff;background:rgba(255,255,255,.04)}
+.club.mas{border-color:var(--oro);color:var(--oro);text-decoration:none}
+.club.mas:hover{background:rgba(255,185,1,.1)}
+
+/* Galería */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+.galeria img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.galeria .alta{grid-row:span 2}
+@media (max-width:900px){.galeria{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}}
+
+/* Parques */
+.parques{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.bloque-parques{background:#fff;border:1px solid var(--linea);border-radius:18px;padding:24px}
+.bloque-parques h3{font-size:30px;color:var(--navy);display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.bloque-parques h3 small{font-family:"Krona One",sans-serif;font-size:12px;color:var(--navy3);letter-spacing:.04em}
+.bloque-parques ul{list-style:none;margin:16px 0 18px;padding:0;display:grid;gap:8px}
+.bloque-parques li a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:10px;background:var(--papel);text-decoration:none;font-weight:700}
+.bloque-parques li a:hover{background:#e6edf8}
+.bloque-parques li a span{font-size:12px;font-weight:700;color:var(--navy3);white-space:nowrap}
+@media (max-width:900px){.parques{grid-template-columns:1fr}}
+
+/* Hotel */
+.hotel{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;background:linear-gradient(120deg,var(--navy) 0%,var(--navy3) 100%);color:#fff;border-radius:22px;padding:44px;position:relative;overflow:hidden}
+.hotel .franjas{width:240px;height:240px;top:-120px;right:-120px;opacity:.75}
+.hotel h2{font-size:clamp(36px,4.6vw,56px)}
+.hotel p{color:#c9d6ee;margin:12px 0 0}
+.hotel .aviso{display:flex;gap:12px;align-items:flex-start;margin-top:18px;background:rgba(255,185,1,.12);border:1px solid rgba(255,185,1,.5);border-radius:12px;padding:12px 14px;font-size:14px;color:#fff}
+.hotel .aviso svg{flex:none;width:20px;height:20px;stroke:var(--oro);fill:none;stroke-width:2.2;margin-top:2px}
+.hotel .botones{display:grid;gap:12px;position:relative}
+@media (max-width:900px){.hotel{grid-template-columns:1fr;padding:32px 22px}}
+@media (max-width:640px){.franjas{width:190px;height:190px}.franjas.ar{top:-150px;left:-150px}.franjas.ab{bottom:-130px;right:-110px}.hotel .franjas{display:none}}
+
+/* Reglas */
+.reglas{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
+.tabla-wrap{overflow-x:auto;border-radius:14px;border:1px solid var(--linea);background:#fff}
+table{border-collapse:collapse;width:100%;min-width:460px;font-size:14px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--linea)}
+th{background:var(--navy);color:#fff;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:800}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;color:var(--navy)}
+.cuotas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.cuota{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:16px}
+.cuota small{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gris)}
+.cuota b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:34px;color:var(--navy);line-height:1.1}
+.cuota span{font-size:13px;color:var(--gris)}
+.acordeon{display:grid;gap:10px}
+.acordeon details{background:#fff;border:1px solid var(--linea);border-radius:14px;overflow:hidden}
+.acordeon summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:800;font-size:16px;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.acordeon summary::-webkit-details-marker{display:none}
+.acordeon summary::after{content:"+";font-family:Montserrat,sans-serif;font-weight:500;font-size:28px;line-height:1;color:var(--navy3);transition:transform .2s}
+.acordeon details[open] summary::after{transform:rotate(45deg)}
+.acordeon .dentro{padding:0 20px 18px;color:var(--gris);font-size:15px}
+.acordeon .dentro ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.acordeon .dentro b{color:var(--tinta)}
+.reglas>*{min-width:0}
+@media (max-width:900px){.reglas{grid-template-columns:1fr}}
+
+/* Cierre */
+.cierre{position:relative;color:#fff;text-align:center;padding-block:110px;overflow:hidden}
+.cierre picture,.cierre .fondo{position:absolute;inset:0}
+.cierre .fondo img{width:100%;height:100%;object-fit:cover}
+.cierre::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,24,72,.82),rgba(0,16,47,.9))}
+.cierre .envoltura{position:relative;z-index:1;display:grid;justify-items:center;gap:16px}
+.cierre h2{font-size:clamp(46px,7vw,92px)}
+.cierre h2 .o{color:var(--oro)}
+.cierre p{max-width:56ch;color:#d4e0f4;margin:0}
+
+/* Contacto y pie */
+.contacto{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ct{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--linea);border-radius:14px;padding:18px;text-decoration:none}
+.ct:hover{border-color:var(--navy3)}
+.ct .ico{flex:none;width:46px;height:46px;border-radius:12px;background:var(--navy);display:grid;place-items:center}
+.ct .ico svg{width:22px;height:22px;stroke:var(--oro);fill:none;stroke-width:2}
+.ct small{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gris)}
+.ct b{font-size:16px;overflow-wrap:anywhere}
+@media (max-width:900px){.contacto{grid-template-columns:1fr}}
+footer{background:var(--noche);color:#9fb0cf;font-size:13px}
+footer .envoltura{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-block:28px}
+footer img{width:54px}
+footer a{color:#dfe8f8}
+
+/* Marcas de "por confirmar" (solo en la maqueta) */
+.pc{background:#fff3b0;color:#5b4700;border-radius:4px;padding:0 4px;font-weight:700;font-size:.92em}
+</style>
+</head>
+<body>
+
+<header class="cab">
+  <div class="envoltura">
+    <a href="#inicio" aria-label="Legends Cup Miami, home"><img class="logo" src="assets/logo_legends_180.png" alt="Legends Cup Miami" width="64" height="66"></a>
+    <button class="hamb" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#weekends">Weekends</a><a href="#clubs">Clubs</a><a href="#parks">Parks</a><a href="#hotels">Hotels</a><a href="#rules">Rules</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn oro" href="https://system.gotsport.com/org_event/events/54323" target="_blank" rel="noopener">Schedules &amp; results</a>
+  </div>
+</header>
+
+<main id="inicio">
+<!-- HERO -->
+<section class="hero" style="padding-block:0" aria-labelledby="h-hero">
+  <span class="franjas ar" aria-hidden="true"></span><span class="franjas ab" aria-hidden="true"></span>
+  <div class="envoltura">
+    <div>
+      <p class="ceja ext"><b>4th edition</b> Miami, Florida · 2026</p>
+      <h1 id="h-hero">Where <span class="c">legends</span> are <span class="o">made</span></h1>
+      <p class="bajada">Youth soccer tournament for boys and girls teams, from U9 Future Stars to U19. Two weekends in Miami, a minimum of 3 games for every team and trophies for champions and finalists.</p>
+      <div class="fechas-hero">
+        <div class="fh"><small>Weekend 1 · 11v11</small><strong>Oct 23–25, 2026</strong><span>U13–U19 · Completed</span></div>
+        <div class="fh vivo"><small><span class="punto" aria-hidden="true"></span>Weekend 2 · 7v7 &amp; 9v9</small><strong>Nov 6–8, 2026</strong><span>U9 FS–U12 · Live now</span></div>
+      </div>
+      <div class="acciones">
+        <a class="btn oro" href="https://system.gotsport.com/org_event/events/54323" target="_blank" rel="noopener">7v7 &amp; 9v9 schedules &amp; results <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn linea" href="https://www.legendsmiamicup.com/_files/ugd/cfcd23_c2998aae967b45fa8d22caddc3df68d9.pdf" target="_blank" rel="noopener">Field maps</a>
+      </div>
+    </div>
+    <div class="foto-hero">
+      <picture><source srcset="assets/hero_640.webp 640w, assets/hero_1100.webp 1100w" sizes="(max-width:900px) 90vw, 470px" type="image/webp">
+        <img src="assets/hero_1100.webp" alt="A team lifts the Legends Cup trophy in front of the tournament flags, 2026" width="1100" height="1375" fetchpriority="high"></picture>
+      <div class="sello"><img src="assets/logo_legends_180.png" alt="" width="52" height="54"><div><b>Champions 2026</b><span>11v11 weekend</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cifras" role="region" aria-label="Tournament at a glance">
+  <ul>
+    <li><b>4th</b><span>Edition</span></li>
+    <li><b>2</b><span>Weekends</span></li>
+    <li><b>U9–U19</b><span>Boys &amp; girls</span></li>
+    <li><b>3+</b><span>Games guaranteed</span></li>
+    <li><b>1st &amp; 2nd</b><span>Trophies &amp; medals</span></li>
+  </ul>
+</div>
+
+<!-- FINES DE SEMANA -->
+<section id="weekends" aria-labelledby="h-findes">
+  <div class="envoltura">
+    <div class="titulo"><span class="ext">Two weekends · one cup</span><h2 id="h-findes">Pick your weekend</h2>
+      <p>Each format has its own weekend, schedule and parks. Schedules, standings and results are published live on GotSport.</p></div>
+    <div class="findes">
+      <article class="finde">
+        <div class="ft"><img src="assets/w_11v11_700.webp" srcset="assets/w_11v11_700.webp 700w, assets/w_11v11_1100.webp 1100w" sizes="(max-width:900px) 92vw, 570px" alt="11v11 match: a player shoots past a sliding defender" width="1100" height="733" loading="lazy"><span class="etq hecho">Completed</span></div>
+        <div class="cuerpo">
+          <div><h3>11v11</h3><p class="cuando" style="margin:6px 0 0">October 23–25, 2026</p></div>
+          <dl class="datos"><div><dt>Ages</dt><dd>U13–U19</dd></div><div><dt>Entry fee</dt><dd>$1,125</dd></div><div><dt>Referees</dt><dd>$70 / game</dd></div></dl>
+          <p class="parques-mini"><b>Parks:</b> Amelia Earhart Soccer Park · Miramar Regional Park · Kendall Soccer Park · Florida Blue Training Center</p>
+          <div class="acciones"><a class="btn navy" href="https://system.gotsport.com/org_event/events/54324" target="_blank" rel="noopener">Results</a><a class="btn navy-linea" href="https://www.legendsmiamicup.com/_files/ugd/cfcd23_b20f04de19594fb6bfdf3617d3b77f13.pdf" target="_blank" rel="noopener">Field maps</a></div>
+        </div>
+      </article>
+      <article class="finde">
+        <div class="ft"><img src="assets/w_7v7_700.webp" srcset="assets/w_7v7_700.webp 700w, assets/w_7v7_1100.webp 1100w" sizes="(max-width:900px) 92vw, 570px" alt="7v7 match: a girl and a boy fight for the ball" width="1100" height="733" loading="lazy"><span class="etq vivo">This weekend</span></div>
+        <div class="cuerpo">
+          <div><h3>7v7 &amp; 9v9</h3><p class="cuando" style="margin:6px 0 0">November 6–8, 2026</p></div>
+          <dl class="datos"><div><dt>Ages</dt><dd>U9 FS–U12</dd></div><div><dt>Entry fee</dt><dd>$950</dd></div><div><dt>Referees</dt><dd>$30 / $60</dd></div></dl>
+          <p class="parques-mini"><b>Parks:</b> Homestead Air Reserve Park · Three Lakes Park · Amelia Earhart Soccer Park · Florida Blue Training Center · Miramar Regional Park</p>
+          <div class="acciones"><a class="btn oro" href="https://system.gotsport.com/org_event/events/54323" target="_blank" rel="noopener">Schedules &amp; results</a><a class="btn navy-linea" href="https://www.legendsmiamicup.com/_files/ugd/cfcd23_c2998aae967b45fa8d22caddc3df68d9.pdf" target="_blank" rel="noopener">Field maps</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section style="padding-top:0" aria-labelledby="h-sobre">
+  <div class="envoltura sobre">
+    <div class="ft"><img src="assets/about_600.webp" srcset="assets/about_600.webp 600w, assets/about_900.webp 900w" sizes="(max-width:900px) 90vw, 460px" alt="The Legends Cup Miami champion trophy on the grass" width="900" height="1125" loading="lazy"></div>
+    <div>
+      <div class="titulo" style="margin-bottom:0"><span class="ext">About the tournament</span><h2 id="h-sobre">Built for clubs, made for players</h2>
+        <p>Legends Cup Miami brings together academies and clubs from all over South Florida for a weekend of real competition, with professional tournament management from the first whistle to the awards ceremony.</p></div>
+      <ul class="lista-ok">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>U9 Future Stars to U19 divisions</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Open to boys and girls teams</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Minimum 3 games guaranteed</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>World Cup–style pool play</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Trophies and medals for 1st &amp; 2nd</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Played under FYSA rules</li>
+      </ul>
+      <p class="cita"><b>"We love being a tournament with purpose for every club."</b> Every team, from the youngest Future Stars to U19, plays at least three games and competes for the cup.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CLUBES -->
+<section class="oscura" id="clubs" aria-labelledby="h-clubes">
+  <div class="envoltura">
+    <div class="titulo"><span class="ext">Legends Cup Miami 2026</span><h2 id="h-clubes">Clubs that joined this year</h2>
+      <p>Some of the clubs confirmed for the 4th edition. The complete list of teams for each weekend is on GotSport.</p></div>
+    <div class="clubes">
+      <span class="club">Inter Miami CF Academy</span><span class="club">PSG Academy Miami</span><span class="club">Weston FC</span><span class="club">One FC Miami</span>
+      <span class="club">Pinecrest Premier SC</span><span class="club">Miami Breakers FC</span><span class="club">Key Biscayne SC</span><span class="club">Miami Futbol Academy Rush</span>
+      <span class="club">Athletum FC</span><span class="club">Weston Select SC</span><span class="club">Strikers Miami FC</span><span class="club">Miami United Academy DP</span>
+      <span class="club">Coral Estate SC</span><span class="club">Atlético Fortaleza USA</span><span class="club">Fort Lauderdale United FC</span><span class="club">Albion SC Miami</span>
+      <a class="club mas" href="https://system.gotsport.com/org_event/events/54323/clubs" target="_blank" rel="noopener">7v7 &amp; 9v9 clubs →</a>
+      <a class="club mas" href="https://system.gotsport.com/org_event/events/54324/clubs" target="_blank" rel="noopener">11v11 clubs →</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section aria-labelledby="h-gal">
+  <div class="envoltura">
+    <div class="titulo"><span class="ext">Weekend 1 · October 2026</span><h2 id="h-gal">Moments from the field</h2></div>
+    <div class="galeria">
+      <img class="alta" src="assets/g_toque_600.webp" srcset="assets/g_toque_600.webp 600w, assets/g_toque_900.webp 900w" sizes="(max-width:900px) 46vw, 280px" alt="A player juggles the ball under a blue sky" loading="lazy" width="900" height="1125">
+      <img src="assets/g_duelo_600.webp" srcset="assets/g_duelo_600.webp 600w, assets/g_duelo_900.webp 900w" sizes="(max-width:900px) 46vw, 280px" alt="Two players fight for the ball in an 11v11 match" loading="lazy" width="900" height="1125">
+      <img class="alta" src="assets/g_portero_600.webp" srcset="assets/g_portero_600.webp 600w, assets/g_portero_900.webp 900w" sizes="(max-width:900px) 46vw, 280px" alt="A goalkeeper seen through the net" loading="lazy" width="900" height="1125">
+      <img src="assets/g_abrazo_600.webp" srcset="assets/g_abrazo_600.webp 600w, assets/g_abrazo_900.webp 900w" sizes="(max-width:900px) 46vw, 280px" alt="Teammates celebrate a goal" loading="lazy" width="900" height="1125">
+      <img src="assets/g_campeon_600.webp" srcset="assets/g_campeon_600.webp 600w, assets/g_campeon_900.webp 900w" sizes="(max-width:900px) 46vw, 280px" alt="A champion team with medals and the trophy in front of the Legends backdrop" loading="lazy" width="900" height="1125">
+      <img src="assets/g_saludo_600.webp" srcset="assets/g_saludo_600.webp 600w, assets/g_saludo_900.webp 900w" sizes="(max-width:900px) 46vw, 280px" alt="A player raises his hand on the field" loading="lazy" width="900" height="1125">
+    </div>
+    <div class="acciones" style="justify-content:center"><a class="btn navy-linea" href="https://www.instagram.com/legendscupmiami/" target="_blank" rel="noopener">More on Instagram @legendscupmiami</a></div>
+  </div>
+</section>
+
+<!-- PARQUES -->
+<section style="padding-top:0" id="parks" aria-labelledby="h-parques">
+  <div class="envoltura">
+    <div class="titulo"><span class="ext">Venues</span><h2 id="h-parques">Parks</h2><p>Tap a park to open it in Google Maps. Check your schedule on GotSport to see which park and field you play on.</p></div>
+    <div class="parques">
+      <div class="bloque-parques">
+        <h3>7v7 &amp; 9v9 <small>Nov 6–8</small></h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Homestead+Air+Reserve+Park+Homestead+FL" target="_blank" rel="noopener">Homestead Air Reserve Park <span>Map →</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Three+Lakes+Park+Miami+FL" target="_blank" rel="noopener">Three Lakes Park <span>Map →</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Amelia+Earhart+Park+Soccer+Hialeah+FL" target="_blank" rel="noopener">Amelia Earhart Soccer Park <span>Map →</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Florida+Blue+Training+Center+Fort+Lauderdale+FL" target="_blank" rel="noopener">Florida Blue Training Center <span>Map →</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Miramar+Regional+Park+Miramar+FL" target="_blank" rel="noopener">Miramar Regional Park <span>Map →</span></a></li>
+        </ul>
+        <a class="btn navy-linea" href="https://www.legendsmiamicup.com/_files/ugd/cfcd23_c2998aae967b45fa8d22caddc3df68d9.pdf" target="_blank" rel="noopener">Download field maps (PDF)</a>
+      </div>
+      <div class="bloque-parques">
+        <h3>11v11 <small>Oct 23–25</small></h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Amelia+Earhart+Park+Soccer+Hialeah+FL" target="_blank" rel="noopener">Amelia Earhart Soccer Park <span>Map →</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Miramar+Regional+Park+Miramar+FL" target="_blank" rel="noopener">Miramar Regional Park <span>Map →</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Kendall+Soccer+Park+Miami+FL" target="_blank" rel="noopener">Kendall Soccer Park <span>Map →</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Florida+Blue+Training+Center+Fort+Lauderdale+FL" target="_blank" rel="noopener">Florida Blue Training Center <span>Map →</span></a></li>
+        </ul>
+        <a class="btn navy-linea" href="https://www.legendsmiamicup.com/_files/ugd/cfcd23_b20f04de19594fb6bfdf3617d3b77f13.pdf" target="_blank" rel="noopener">Download field maps (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL -->
+<section style="padding-top:0" id="hotels" aria-labelledby="h-hotel">
+  <div class="envoltura">
+    <div class="hotel">
+      <span class="franjas" aria-hidden="true"></span>
+      <div>
+        <span class="ext" style="font-size:12px;color:var(--celeste)">Stay to play</span>
+        <h2 id="h-hotel">Traveling to Miami?</h2>
+        <p>We partnered with TRAVELING TEAMS® to secure discounted room blocks at tournament-approved hotels close to our parks.</p>
+        <div class="aviso"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span>This is a Stay-to-Play event: teams traveling <b>75 miles or more</b> must book their hotel through TRAVELING TEAMS®.</span></div>
+      </div>
+      <div class="botones"><span class="btn linea" style="cursor:default;opacity:.85">Hotel booking links · coming soon</span><a class="btn oro" href="mailto:info@legendsmiamicup.com?subject=Hotel%20%C2%B7%20Legends%20Cup%20Miami">Ask about hotels</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- REGLAS -->
+<section style="padding-top:0" id="rules" aria-labelledby="h-reglas">
+  <div class="envoltura">
+    <div class="titulo"><span class="ext">Rules 2026 · FYSA</span><h2 id="h-reglas">Rules &amp; check-in</h2>
+      <p>The essentials of the 2026 rules. The full document is the official reference.</p></div>
+    <div class="reglas">
+      <div>
+        <div class="tabla-wrap"><table>
+          <caption class="sr" style="position:absolute;left:-9999px">Game format by age group</caption>
+          <thead><tr><th>Format</th><th>Ages</th><th>On field</th><th>Roster max</th><th>Ball</th><th>Halves</th></tr></thead>
+          <tbody>
+            <tr><td>7v7</td><td>U9 FS–U10</td><td>7 (min 5)</td><td>12</td><td>4</td><td>2 × 25'</td></tr>
+            <tr><td>9v9</td><td>U11–U12</td><td>9 (min 6)</td><td>16</td><td>4</td><td>2 × 30'</td></tr>
+            <tr><td>11v11</td><td>U13–U19</td><td>11 (min 7)</td><td>18</td><td>5</td><td>2 × 35'</td></tr>
+          </tbody></table></div>
+        <div class="cuotas">
+          <div class="cuota"><small>Entry fee · 7v7 &amp; 9v9</small><b>$950</b><span>per team</span></div>
+          <div class="cuota"><small>Entry fee · 11v11</small><b>$1,125</b><span>per team</span></div>
+          <div class="cuota" style="grid-column:1/-1"><small>Referee fees · per team, per game</small><span style="font-size:15px;color:var(--tinta);font-weight:700">7v7: $30 (single referee) · 9v9: $60 · 11v11: $70</span></div>
+        </div>
+        <div class="acciones"><a class="btn navy" href="https://www.legendsmiamicup.com/_files/ugd/cfcd23_c31a46011ff442c185203a0a9d127d38.pdf" target="_blank" rel="noopener">Download the 2026 rules (PDF)</a></div>
+      </div>
+      <div class="acordeon">
+        <details open><summary>Check-in &amp; eligibility</summary><div class="dentro"><ul>
+          <li>Open to properly registered youth teams from all U.S. Soccer–affiliated organizations (USYS, US Club, FYSA…).</li>
+          <li>Upload player passes, medical releases and the official roster to your GotSport team account before the event.</li>
+          <li>Players may play for <b>one team only</b>. Passes are checked against the approved roster before every game.</li>
+          <li>Up to <b>5 guest players</b> per team, from the same membership platform (USYS or US Club).</li>
+        </ul></div></details>
+        <details><summary>Game day</summary><div class="dentro"><ul>
+          <li>Arrive at the field <b>30 minutes before kick-off</b> for pass verification.</li>
+          <li>Unlimited substitutions at any stoppage, with the referee's permission.</li>
+          <li>No deliberate heading for U12 and younger.</li>
+          <li>Hydration break at the midpoint of each half when it's 85 °F or hotter.</li>
+          <li>Matching numbered jerseys; the home team (listed first) changes if colors conflict.</li>
+        </ul></div></details>
+        <details><summary>Points &amp; tie-breakers</summary><div class="dentro"><ul>
+          <li>Win = 3 · Tie = 1 · Loss = 0. World Cup–style pool play.</li>
+          <li>Tie-breakers: head-to-head, goal differential (max ±4 per game), fewest goals allowed, most goals scored (max 4 per game), penalty kicks.</li>
+          <li>No overtime. Ties in elimination games go straight to penalty kicks.</li>
+        </ul></div></details>
+        <details><summary>Conduct, forfeits &amp; refunds</summary><div class="dentro"><ul>
+          <li>Teams and supporters sit on opposite sidelines. Coaches are responsible for their spectators.</li>
+          <li>A red card means missing the next tournament game.</li>
+          <li>Not showing up with the minimum number of players is a 4-0 forfeit.</li>
+          <li>No refunds after acceptance, except if the tournament is cancelled or a team can't be bracketed.</li>
+        </ul></div></details>
+        <details><summary>Awards</summary><div class="dentro">Champions and finalists of every division receive team trophies and individual medals right after the final.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="cierre" aria-labelledby="h-cierre">
+  <div class="fondo"><img src="assets/cierre_960.webp" srcset="assets/cierre_960.webp 960w, assets/cierre_1920.webp 1920w" sizes="100vw" alt="" loading="lazy"></div>
+  <div class="envoltura">
+    <span class="ext" style="font-size:12px;color:var(--celeste)">Legends Cup Miami</span>
+    <h2 id="h-cierre">See you on the <span class="o">field</span></h2>
+    <p>Follow every game, every goal and every champion of the 4th edition on Instagram.</p>
+    <div class="acciones" style="justify-content:center"><a class="btn oro" href="https://www.instagram.com/legendscupmiami/" target="_blank" rel="noopener">Follow @legendscupmiami</a></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contact" aria-labelledby="h-contacto">
+  <div class="envoltura">
+    <div class="titulo"><span class="ext">Questions?</span><h2 id="h-contacto">Contact us</h2></div>
+    <div class="contacto">
+      <a class="ct" href="mailto:info@legendsmiamicup.com"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><small>Email</small><b>info@legendsmiamicup.com</b></span></a>
+      <a class="ct" href="tel:+13053359635"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg></span><span><small>Phone</small><b>(305) 335-9635</b></span></a>
+      <a class="ct" href="https://www.instagram.com/legendscupmiami/" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span><span><small>Instagram</small><b>@legendscupmiami</b></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<!-- REVISION-ALESSANDRO:INICIO -->
+<!-- Bloque SOLO para la revisión de Alessandro. NO copiar a Wix: borrar todo lo que está entre REVISION-ALESSANDRO:INICIO y :FIN (o correr _pipeline/bloque_revision.py --quitar). -->
+<style>
+.rev-ale{background:#F4F5F7;color:#1C2430;padding:70px 0;font-family:Montserrat,system-ui,sans-serif;border-top:6px dashed var(--ra-acento)}
+.rev-ale .caja{max-width:860px;margin:0 auto;padding:0 20px}
+.rev-ale .etiqueta{display:inline-block;background:#1C2430;color:#fff;border-radius:999px;padding:6px 14px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.rev-ale h2{font-size:30px;line-height:1.15;margin:14px 0 6px;font-weight:800}
+.rev-ale .intro{color:#4B5563;margin-bottom:22px}
+.rev-ale .preg{background:#fff;border:1px solid #DDE1E7;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.rev-ale .preg h3{font-size:16px;font-weight:800;margin-bottom:4px}
+.rev-ale .preg h3 b{color:var(--ra-acento);margin-right:6px}
+.rev-ale .preg p{font-size:14px;color:#4B5563;margin-bottom:10px}
+.rev-ale label.op{display:flex;gap:10px;align-items:flex-start;font-size:15px;padding:6px 0;cursor:pointer}
+.rev-ale label.op input{margin-top:4px;accent-color:var(--ra-acento)}
+.rev-ale textarea{width:100%;min-height:64px;margin-top:8px;border:1px solid #CBD2DA;border-radius:10px;padding:10px;font:14px/1.5 Montserrat,system-ui,sans-serif;resize:vertical}
+.rev-ale .enviado{display:none;color:#15803D;font-weight:800;font-size:13px;margin-top:8px}
+.rev-ale .preg.ok .enviado{display:block}
+.rev-ale .acciones-ra{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.rev-ale button{border:0;border-radius:10px;padding:13px 20px;font:800 14px Montserrat,system-ui,sans-serif;cursor:pointer}
+.rev-ale .b-env{background:#1C2430;color:#fff}
+.rev-ale .b-apr{background:#15803D;color:#fff}
+.rev-ale .b-nota{background:#fff;color:#1C2430;border:1.5px solid #1C2430}
+.rev-ale .estado{font-weight:800;font-size:14px}
+.rev-ale .estado.bien{color:#15803D}.rev-ale .estado.mal{color:#B91C1C}
+.rev-ale .general{background:#fff;border:1px solid #DDE1E7;border-radius:14px;padding:20px 22px;margin-top:26px}
+.rev-ale .general h3{font-size:16px;font-weight:800;margin-bottom:8px}
+</style>
+<section class="rev-ale" id="revision-alessandro" lang="es" style="--ra-acento:#001848">
+ <div class="caja">
+  <span class="etiqueta">Solo para la revisión · no forma parte de la web</span>
+  <h2>Para Alessandro · preguntas pendientes</h2>
+  <p class="intro">Antes de publicar la web de Legends Cup Miami faltan estos datos. Elige una opción, agrega un comentario si hace falta y pulsa <b>Enviar respuestas</b>. Las respuestas quedan guardadas.</p>
+  <div class="preg" data-p="P1"><h3><b>P1</b>Teléfono de contacto</h3><p>La propuesta usa el (305) 335-9635, que está en la web actual y en las piezas de 2024-25. ¿Sigue vigente?</p><label class="op"><input type="radio" name="P1" value="Sí, sigue vigente"><span>Sí, sigue vigente</span></label><label class="op"><input type="radio" name="P1" value="Es otro número (escríbelo abajo)"><span>Es otro número (escríbelo abajo)</span></label><label class="op"><input type="radio" name="P1" value="Mejor no poner teléfono"><span>Mejor no poner teléfono</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P2"><h3><b>P2</b>Clubes 2026</h3><p>La sección "Clubs that joined this year" nombra 16 clubes anunciados como confirmados en Instagram (Inter Miami, PSG Academy, Weston FC, Athletum FC…).</p><label class="op"><input type="radio" name="P2" value="Se pueden mostrar así"><span>Se pueden mostrar así</span></label><label class="op"><input type="radio" name="P2" value="Mejor sin nombres (solo el enlace a GotSport)"><span>Mejor sin nombres (solo el enlace a GotSport)</span></label><label class="op"><input type="radio" name="P2" value="Quitar o agregar clubes (escribe abajo)"><span>Quitar o agregar clubes (escribe abajo)</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P3"><h3><b>P3</b>Después del torneo</h3><p>Desde el 9 de noviembre la portada pasaría a "Thank you / See you in 2027" y dejaría de decir "Live now". ¿Hay fechas de 2027 para anunciar?</p><label class="op"><input type="radio" name="P3" value="Sí, hay fechas (escríbelas abajo)"><span>Sí, hay fechas (escríbelas abajo)</span></label><label class="op"><input type="radio" name="P3" value="Todavía no: poner "2027 dates coming soon""><span>Todavía no: poner "2027 dates coming soon"</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div><div class="preg" data-p="P4"><h3><b>P4</b>Patrocinadores</h3><p>En 2025 aparecieron Nature Valley, Spinex Centers y Pummarola Pizzeria. ¿Se agrega una sección de patrocinadores?</p><label class="op"><input type="radio" name="P4" value="Sí, con esos"><span>Sí, con esos</span></label><label class="op"><input type="radio" name="P4" value="Sí, con otros (escribe cuáles)"><span>Sí, con otros (escribe cuáles)</span></label><label class="op"><input type="radio" name="P4" value="No por ahora"><span>No por ahora</span></label><textarea placeholder="Comentario o dato (opcional)"></textarea><div class="enviado">Enviado ✓</div></div>
+  <div class="acciones-ra"><button class="b-env" type="button" data-ra="enviar">Enviar respuestas</button><span class="estado" data-ra="estado"></span></div>
+  <div class="general">
+   <h3>¿Apruebas la web?</h3>
+   <textarea data-ra="nota" placeholder="Nota general (opcional): cambios de texto, fotos, orden…"></textarea>
+   <div class="acciones-ra"><button class="b-apr" type="button" data-ra="aprobar">Aprobar la web</button><button class="b-nota" type="button" data-ra="dejar-nota">Dejar una nota</button><span class="estado" data-ra="estado2"></span></div>
+  </div>
+ </div>
+</section>
+<script>
+(function(){
+ var CFG={"accion": "https://docs.google.com/forms/d/e/1FAIpQLSeGUY8Cv9Ea08X9HkdznY9pzVoUc4Gj-GdymsVTFP86wbE5sw/formResponse", "entry": {"pieza": 333677581, "cuenta": 724853821, "autor": 299801437, "comentario": 1175231019, "copy_corregido": 1649408514, "copy_original": 1637675582, "enviado": 909195940, "tipo": 1605073129, "zona": 1831673234, "fila": 1327618412}, "cuenta": "web_legends"};
+ var prueba=/[?&]prueba/.test(location.search);
+ var LSK='revale_'+CFG.cuenta+(prueba?'_prueba':'');
+ var sec=document.getElementById('revision-alessandro');
+ function ls(){try{return JSON.parse(localStorage.getItem(LSK)||'{}')}catch(e){return {}}}
+ function guarda(v){try{localStorage.setItem(LSK,JSON.stringify(v))}catch(e){}}
+ function enviar(reg){var f=new URLSearchParams();reg.cuenta=CFG.cuenta;reg.autor='Alessandro';reg.enviado=new Date().toISOString();
+  if(prueba)reg.pieza='PRUEBA_'+reg.pieza;
+  for(var k in CFG.entry)f.append('entry.'+CFG.entry[k],reg[k]==null?'':reg[k]);
+  return fetch(CFG.accion,{method:'POST',mode:'no-cors',body:f}).then(function(){return true},function(){return false})}
+ var g=ls();
+ sec.querySelectorAll('.preg').forEach(function(d){var p=d.dataset.p,v=g[p];if(!v)return;
+  var r=d.querySelector('input[value="'+(v.op||'').replace(/"/g,'\\"')+'"]');if(r)r.checked=true;d.querySelector('textarea').value=v.txt||'';d.classList.add('ok')});
+ function est(sel,t,ok){var e=sec.querySelector('[data-ra="'+sel+'"]');e.textContent=t;e.className='estado '+(ok?'bien':'mal')}
+ sec.querySelector('[data-ra="enviar"]').addEventListener('click',function(){
+  var regs=[];sec.querySelectorAll('.preg').forEach(function(d){var p=d.dataset.p,o=d.querySelector('input:checked'),tx=d.querySelector('textarea').value.trim();
+   if(!o&&!tx)return;var prev=g[p]||{};if(prev.op===(o?o.value:'')&&prev.txt===tx)return;
+   regs.push({d:d,p:p,op:o?o.value:'',txt:tx})});
+  if(!regs.length){est('estado','No hay respuestas nuevas para enviar',false);return}
+  est('estado','Enviando…',true);
+  Promise.all(regs.map(function(r){return enviar({pieza:r.p,tipo:'respuesta',comentario:(r.op?r.op:'')+(r.op&&r.txt?' · ':'')+r.txt})})).then(function(oks){
+   regs.forEach(function(r,i){if(oks[i]){g[r.p]={op:r.op,txt:r.txt};r.d.classList.add('ok')}});guarda(g);
+   est('estado',oks.every(Boolean)?'Enviado ✓':'Algunas no se enviaron, intenta de nuevo',oks.every(Boolean))})});
+ function general(tipo){var tx=sec.querySelector('[data-ra="nota"]').value.trim();
+  if(tipo==='nota'&&!tx){est('estado2','Escribe la nota primero',false);return}
+  est('estado2','Enviando…',true);
+  enviar({pieza:'APROBACION',tipo:tipo,comentario:tx}).then(function(ok){if(ok){g['APROBACION_'+tipo]=tx||'ok';guarda(g)}
+   est('estado2',ok?(tipo==='aprobado'?'Web aprobada · Enviado ✓':'Nota enviada ✓'):'No se pudo enviar, intenta de nuevo',ok)})}
+ sec.querySelector('[data-ra="aprobar"]').addEventListener('click',function(){general('aprobado')});
+ sec.querySelector('[data-ra="dejar-nota"]').addEventListener('click',function(){general('nota')});
+})();
+</script>
+<!-- REVISION-ALESSANDRO:FIN -->
+<footer>
+  <div class="envoltura">
+    <img src="assets/logo_legends_180.png" alt="Legends Cup Miami" width="54" height="56">
+    <span>© 2026 Legends Cup Miami · Soccer Cage Events LLC · Miami, Florida</span>
+    <span><a href="https://www.instagram.com/legendscupmiami/" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:info@legendsmiamicup.com">info@legendsmiamicup.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.hamb'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var a=m.classList.toggle('abierto');b.setAttribute('aria-expanded',String(a));});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('abierto');b.setAttribute('aria-expanded','false');}});
+  // Acordeón: un tema abierto a la vez
+  var ds=document.querySelectorAll('.acordeon details');
+  ds.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)ds.forEach(function(o){if(o!==d)o.open=false;});});});
+})();
+</script>
+</body>
+</html>
